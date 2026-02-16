@@ -6,8 +6,7 @@ import ArticlesList from './pages/ArticlesList';
 import ArticleForm from './pages/ArticleForm';
 import Authors from './pages/Authors';
 import Settings from './pages/Settings';
-// CORRECCIÓN: Ajuste de la ruta relativa asumiendo que App.tsx está en la raíz de src/
-import Home from './pages/home/page'; 
+import Home from './pages/home/page'; // CORRECCIÓN: Ruta relativa limpia
 import { AuthProvider } from './contexts/AuthContext';
 
 const App: React.FC = () => {
@@ -22,8 +21,7 @@ const App: React.FC = () => {
             <Route path="/editar-noticia/:id" element={<ArticleForm />} />
             <Route path="/autores" element={<Authors />} />
             <Route path="/configuracion" element={<Settings />} />
-            
-            {/* CORRECCIÓN: Se asigna una ruta interna válida de tu dominio */}
+            {/* CORRECCIÓN: Ruta interna válida */}
             <Route path="/web" element={<Home />} />
           </Routes>
         </Layout>
