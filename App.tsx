@@ -22,7 +22,7 @@ const App: React.FC = () => {
             <Route path="/autores" element={<Authors />} />
             <Route path="/configuracion" element={<Settings />} />
             {/* Nueva ruta para ver la web tal cual la hemos programado */}
-            <Route path="/ver-web" element={<Home />} />
+            <Route path="https://aistudio.google.com/apps/drive/1rDm_cYqpKlkzp8y1XwjEKQf322-qqtlg?showPreview=true&showAssistant=true" element={<Home />} />
           </Routes>
         </Layout>
       </Router>
