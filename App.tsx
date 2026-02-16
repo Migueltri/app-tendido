@@ -6,7 +6,8 @@ import ArticlesList from './pages/ArticlesList';
 import ArticleForm from './pages/ArticleForm';
 import Authors from './pages/Authors';
 import Settings from './pages/Settings';
-import Home from './src/pages/home/page'; // Importamos la nueva portada
+// CORRECCIÓN: Ajuste de la ruta relativa asumiendo que App.tsx está en la raíz de src/
+import Home from './pages/home/page'; 
 import { AuthProvider } from './contexts/AuthContext';
 
 const App: React.FC = () => {
@@ -21,8 +22,9 @@ const App: React.FC = () => {
             <Route path="/editar-noticia/:id" element={<ArticleForm />} />
             <Route path="/autores" element={<Authors />} />
             <Route path="/configuracion" element={<Settings />} />
-            {/* Nueva ruta para ver la web tal cual la hemos programado */}
-            <Route path="https://aistudio.google.com/apps/drive/1rDm_cYqpKlkzp8y1XwjEKQf322-qqtlg?showPreview=true&showAssistant=true" element={<Home />} />
+            
+            {/* CORRECCIÓN: Se asigna una ruta interna válida de tu dominio */}
+            <Route path="/web" element={<Home />} />
           </Routes>
         </Layout>
       </Router>
